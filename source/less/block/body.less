@@ -1,0 +1,24 @@
+.body__overflow {
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
+
+  &::before {
+    display: flex;
+    content: '';
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+  }
+}
+
+.body {
+  font-family: @font;
+  color: @basic-black;
+}
+
+// .body__overflow,
+// .header {
+//   z-index: 4;
+// }

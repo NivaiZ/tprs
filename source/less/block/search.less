@@ -1,0 +1,153 @@
+.search {
+  position: relative;
+}
+
+.search__head {
+  font-size: 36px;
+  font-weight: 600;
+  color: @basic-white;
+  margin: 0 0 0 0;
+
+  @media (max-width: 799px) {
+    font-size: 20px;
+  }
+}
+
+.search__item {
+  &:first-child {
+    margin-bottom: 17px;
+  }
+}
+
+.search__input {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid @basic-gray;
+  border-radius: 8px;
+  font-weight: 400;
+  padding: 19px 24px 19px 24px;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:focus {
+    &::placeholder {
+      color: @basic-grey;
+    }
+  }
+
+  @media (max-width: 799px) {
+    padding: 19px 50px 19px 24px;
+  }
+}
+
+.search__label {
+  display: block;
+  .visually__hidden();
+}
+
+.search__fieldset {
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+
+.search__form--flex {
+  display: flex;
+
+  @media (max-width: 799px) {
+    position: relative;
+  }
+}
+
+.search__wrapper {
+  &::before {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("../img/pic_main@2x.png");
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+  }
+}
+
+.search__list {
+  display: flex;
+  flex-direction: column;
+  padding: 95px 0 0 160px;
+  width: 1120px;
+  min-height: 360px;
+
+  @media (max-width: 799px) {
+    align-items: center;
+    padding: 40px 20px 40px 20px;
+    width: 100%;
+    min-height: unset;
+  }
+
+  @media (min-width: 800px) and (max-width: 1279px) {
+    width: 100%;
+    padding: 40px 20px 40px 20px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0 auto;
+  }
+}
+
+.search__button {
+  .button();
+  padding: 14px 0 14px 0;
+  background-color: @basic-red;
+  border-radius: 8px;
+  min-width: 142px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: @extra-red;
+  }
+}
+
+.search__sign {
+  font-weight: 600;
+  font-size: 24px;
+  color: @basic-white;
+}
+
+.search__box {
+  display: flex;
+  margin-left: 15px;
+
+  @media (max-width: 799px) {
+    display: none;
+  }
+}
+
+.search__information {
+  font-weight: 400;
+  font-size: 16px;
+  color: @basic-white;
+}
+
+.search__box--mobile {
+  display: none;
+
+  @media (max-width: 799px) {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+  }
+
+  .search__mobile {
+    .button();
+  }
+}
