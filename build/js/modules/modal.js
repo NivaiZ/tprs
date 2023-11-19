@@ -27,7 +27,7 @@ export function modalVisible() {
       }
     })
 
-    document.addEventListener('click', (event) => {
+    modalClose.addEventListener('click', (event) => {
       const target = event.target;
       if (!target.closest('.side-menu__open') && !target.closest(['[data-button="close"]'])) {
         modal.classList.remove('modal__open');

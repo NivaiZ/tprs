@@ -103,7 +103,7 @@
   padding: 60px 0 60px 0;
 
   @media (max-width: 799px) {
-    padding: 18px 0 18px 0;
+    padding: 8px 0 8px 0;
     max-width: unset;
   }
 }
@@ -150,6 +150,7 @@
     color: @basic-blue;
     font-size: 16px;
     white-space: nowrap;
+    margin-left: 10px;
   }
 }
 
@@ -198,15 +199,14 @@
     opacity: 0;
     height: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease;
   }
 }
 
 .content__visible {
   @media (max-width: 799px) {
     opacity: 1;
-    height: 100%;
     visibility: visible;
+    transition: opacity 0.5s ease;
   }
 }
 
@@ -219,7 +219,7 @@
 
 .content__rotate {
   @media (max-width: 799px) {
-    .content__svg {
+    .content__svg--rotate {
       transform: rotate(-180deg);
     }
   }
